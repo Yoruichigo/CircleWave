@@ -282,6 +282,11 @@ namespace NatsumeGrass
 				(GET_INSTANCE(NatsumeGrass::System::NatsumeSound))->SoundPlay(_Key);
 			}
 
+			void Stop(UINT _Key)
+			{
+				(GET_INSTANCE(NatsumeGrass::System::NatsumeSound))->SoundStop(_Key);
+			}
+
 		};
 
 

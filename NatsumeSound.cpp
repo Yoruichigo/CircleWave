@@ -184,8 +184,19 @@ namespace NatsumeGrass
 			if(_Key == NULL)
 			{
 				Error("サウンドキーが無効です。");
+				return;
 			}
 			SoundDataBuffer[_Key]->Play(0,0,0);
+			
+		}
+
+		void NatsumeSound::SoundStop(UINT _Key)
+		{
+			if(_Key == NULL)
+			{
+				return;
+			}
+			SoundDataBuffer[_Key]->Stop();
 		}
 
 

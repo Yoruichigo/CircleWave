@@ -85,7 +85,7 @@ namespace NatsumeGrass
 			//LPDIRECTINPUT8 LpDirectInput;	//DirectInputのオブジェクト
 			//std::vector<DIDEVICEINSTANCE> DeviceInfoAry;	//現在の入力デバイス情報？？
 		
-			LPDIRECTINPUTDEVICE8 LpKeyboard;	//入力デバイス：キーボード
+			//LPDIRECTINPUTDEVICE8 LpKeyboard;	//入力デバイス：キーボード
 			
 		};
 

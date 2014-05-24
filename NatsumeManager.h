@@ -12,7 +12,10 @@
 
 #include "NatsumeSound.h"
 
+#include "NatsumeInput.h"
+
 #include "NatsumeExternal.h"
+
 
 
 

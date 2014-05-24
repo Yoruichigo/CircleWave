@@ -28,6 +28,7 @@ namespace NatsumeGrass
 			UINT SoundDataLoad(TCHAR *_FileName);
 
 			void SoundPlay(UINT _Key);
+			void SoundStop(UINT _Key);
 
 		private:
 			NatsumeSound();

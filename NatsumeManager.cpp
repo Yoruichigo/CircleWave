@@ -48,6 +48,8 @@ namespace NatsumeGrass
 
 		HRESULT NatsumeManager::Initialize(HINSTANCE _hInstance)
 		{
+			hInstance = _hInstance;
+
 			if(FAILED(
 				InitWindow(_hInstance)
 				))
@@ -83,6 +85,7 @@ namespace NatsumeGrass
 		//サブクラスの初期化です。
 		HRESULT NatsumeManager::OtherInitialize()
 		{
+			CREATE_SINGLETON_INSTANCE(NatsumeGrass::System::InputClass);
 			CREATE_SINGLETON_INSTANCE(NatsumeGrass::System::Polygon_2D);
 			CREATE_SINGLETON_INSTANCE(NatsumeGrass::System::NatsumeSound);
 			return S_OK;
@@ -91,6 +94,7 @@ namespace NatsumeGrass
 		//サブクラスのリリースです。
 		void NatsumeManager::OtherRelease()
 		{
+			DESTROY_SINGLETON_INSTANCE(NatsumeGrass::System::InputClass);
 			DESTROY_SINGLETON_INSTANCE(NatsumeGrass::System::Polygon_2D);
 			DESTROY_SINGLETON_INSTANCE(NatsumeGrass::System::NatsumeSound);
 

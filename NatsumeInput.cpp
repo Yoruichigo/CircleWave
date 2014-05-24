@@ -17,7 +17,7 @@ namespace NatsumeGrass
 		
 		static LPDIRECTINPUT8 LpDirectInput = nullptr;
 		//std::vector<DIDEVICEINSTANCE> DeviceInfoAry;
-		//LPDIRECTINPUTDEVICE8 LpKeyboard = nullptr;
+		static LPDIRECTINPUTDEVICE8 LpKeyboard = nullptr;
 		static LPDIRECTINPUTDEVICE8 LpJoypad = nullptr;
 		
 		/*
@@ -115,7 +115,7 @@ namespace NatsumeGrass
 		InputClass::InputClass()
 		{
 			//LpDirectInput	= nullptr;
-			LpKeyboard		= nullptr;
+			//LpKeyboard		= nullptr;
 			//LpJoypad		= nullptr;
 
 			if(FAILED(this->Initialize()))

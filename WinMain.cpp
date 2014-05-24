@@ -25,7 +25,7 @@ INT WINAPI WinMain(HINSTANCE hInstance,
 		return -1;
 	}
 
-	/*
+	
 	UINT SoundKey[5];
 	ZeroMemory(&SoundKey,sizeof(SoundKey));
 	SoundKey[0] = Sound::LoadSound("Data/トコハナ(常花).wav");
@@ -35,9 +35,10 @@ INT WINAPI WinMain(HINSTANCE hInstance,
 	
 	
 	Sound::Play(SoundKey[3]);
-	*/
+	
 
-	CustomSquare A = CustomSquare(10,20,40,40);
+	CustomSquare A;
+
 
 	{
 		//メッセージループ
@@ -53,6 +54,11 @@ INT WINAPI WinMain(HINSTANCE hInstance,
 				}
 				else
 				{
+					Input::UpdateAcquire();
+					if(Input::KeyCheckFrame(DIK_SPACE) == 1)
+					{
+						Sound::Stop(SoundKey[3]);
+					}
 					//メインループ
 					Graphic::BeginRender();
 

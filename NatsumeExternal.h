@@ -125,6 +125,8 @@ namespace NatsumeGrass
 			//çƒê∂
 			void Play(UINT _Key);
 
+			//í‚é~
+			void Stop(UINT _Key);
 		};
 
 		// *********************************
